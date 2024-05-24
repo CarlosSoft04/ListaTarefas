@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: darkgrey;
+  padding: 30px;
+  color: black;
+  background-image: url('./imgs/pexels-alexazabache-3722806.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 50px; /* Reduzi o margin-bottom */
+  background-color: #efefef;
+  padding: 20px;
+  border-radius: 20px; /* Reduzi o border-radius */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra suave */
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px; /* Diminuí o tamanho da fonte */
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 10px; /* Adicionei border-radius */
+  margin-bottom: 20px; /* Adicionei espaço inferior */
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: indigo;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px; /* Aumentei o padding */
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px; /* Aumentei o border-radius */
+  cursor: pointer;
+  opacity: .8;
+  transition: .3s;
+}
+
+.asc, .desc {
+  width: 70px;
+}
+
+.tarefa {
+  width: 130px;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.todo-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #00000085;
+  max-height: 300px; /* Limite de altura para lista de tarefas */
+  overflow-y: auto; /* Scroll vertical */
+}
+
+.todo {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Suavizei a sombra */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.complete {
+  background-color: rgba(0, 100, 0, 0.897);
+}
+
+.remove {
+  background-color: crimson;
+}
+
+.todo-form {
+  padding-bottom: 1.5rem;
+}
+
+input, select {
+  padding: 10px; /* Aumentei o padding */
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Aumentei o border-radius */
+  width: 100%;
+}
+
+.filter, .search {
+  border-bottom: 1px solid #555;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap; /* Permitindo quebra de linha */
+  gap: 1rem; /* Espaçamento entre opções */
+}
+
+.filter-options div {
+  flex: 1 1 45%; /* Flex item com largura de 45% */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .app {
+    max-width: 100%;
+    padding: 15px;
+    margin: 0 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .todo-form, .filter, .search, .todo-list {
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px 12px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .todo-form, .filter, .search, .todo-list {
+    padding: 8px;
+  }
+
+  button {
+    padding: 6px 10px;
+    margin-right: 3px;
+    font-size: 14px;
+  }
+
+  .todo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo button {
+    margin-top: 10px;
+  }
+}
