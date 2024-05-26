@@ -36,17 +36,19 @@ function App() {
     }
   }, [todos]);
 
-  const addTodo = (text, category) => {
-    const newTodos = [
-      ...todos,
+
+//Adiconar uma nova tarefa
+  const addTodo = (text, category) => { //Cria uma funcao,e a decalra com dois parametros que serao passados, text e category
+    const newTodos = [ //Cria um novo array de tarefas
+      ...todos, //Utilizando o spread, ele copia todos os elementos do array todos para o novo array newTodos.
       {
-        id: Math.floor(Math.random() * 1000),
-        text,
-        category,
-        isCompleted: false,
+        id: Math.floor(Math.random() * 1000),  //Gera automaticamente um id aleatorio para cada tarefa
+        text,  //Cria um texto
+        category, //Cria uma categoria 
+        isCompleted: false, //Define o estado inicial da nova tarefa como false, ou seja, incompleta
       },
     ];
-    setTodos(newTodos);
+    setTodos(newTodos); //Atualiza o valor da constante, passando um novo array criado
   };
 
   const removeTodo = (id) => {
